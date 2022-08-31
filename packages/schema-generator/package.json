@@ -6,8 +6,8 @@
   "typings": "dist/index.d.ts",
   "scripts": {
     "beta": "npm publish --tag beta",
-    "build": "father-build",
-    "prepare": "yarn build",
+    "build": "father build",
+    "prepare": "pnpm run build",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "postpublish": "git push --tags",
     "test": "umi-test",

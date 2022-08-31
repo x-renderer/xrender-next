@@ -1,8 +1,11 @@
+import copy from 'rollup-plugin-copy';
 import { defineConfig } from 'father';
 
 export default defineConfig({
-  cjs: { output: 'lib' },
   esm: { output: 'es' },
+  // 或者
+  cjs: { output: 'lib' },
+  platform: 'browser',
   // extraBabelPlugins: [
   //   [
   //     'import',
@@ -22,6 +25,5 @@ export default defineConfig({
   //     },
   //     '@ant-design/icons',
   //   ],
-  //   // ['transform-remove-console', { exclude: ['error', 'warn'] }],
   // ],
 });
